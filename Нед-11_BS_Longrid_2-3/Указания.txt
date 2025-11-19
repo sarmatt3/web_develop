@@ -1,0 +1,8 @@
+Для продолжения работы над СЕКЦИЯМИ лонгрида 2 и 3 
+НЕОБХОДИМО
+скопировать в папку `project_Bootstrap_2-3`
+файлы
+- index.html и
+-style.css
+из предыдущего проекта `project_Bootstrap_1` (Нед_10_BS_Longrid_Header)
+
