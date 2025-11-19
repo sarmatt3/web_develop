@@ -1,0 +1,77 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><html>
+  <head>
+  </head>
+  <body>
+    <header class="head">
+      <h2>SARMAT TECH</h2>
+    </header>
+    <header class="navigation">
+      <a href=#>Главная</a>
+      <a href=#>Проекты</a>
+      
+      <a href=# onclick="test()">Контакты</a>
+    </header>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0f;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #fff;
+}
+
+/* Верхняя шапка */
+.head {
+  background: #111827;
+  padding: 22px 15px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+}
+
+/* Навигация */
+.navigation {
+  background: #0f172a;
+  padding: 18px 25px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Ссылки */
+.navigation a {
+  color: #c7d2fe;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 3px;
+  transition: 0.25s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navigation a:hover {
+  color: #818cf8;
+  border-bottom: 2px solid #818cf8;
+  text-shadow: 0 0 8px #818cf8;
+  transform: scale(1.1);
+}
+
+/* Для красоты при скролле */
+.navigation,
+.head {
+  position: relative;
+  z-index: 10;
+}</style><script>function test(){
+ // alert("Ссылка нажата")
+ let value = prompt("Введите что-нибудь:", "По умолчанию");
+
+alert("Вы ввели: " + value);}
+ </script>
