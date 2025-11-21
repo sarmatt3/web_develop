@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строкии массивы JavaScript</title>
+</head>
+<body>
+    <script>
+        function ModalW(){
+            let name = prompt ("Как тебя зовут?")
+            document.write (`Привет, ${name}`)
+            
+            
+            console.log (`Привет, ${name}`)}
+
+        function newTask(){
+
+        }
+
+        // let str = 'Hello, World!';
+        // alert(str.length);
+
+        // let str1 = 'Hello';
+        // alert(str[0]);
+        // alert(str1[str1.length - 1]);
+
+        // let str2 = 'Да';
+        // str2[0] = 'д';
+        // str2 = 'д' + str2[1];
+        // alert(str2);
+
+
+        // alert("hello, world!".toUpperCase());
+        // alert('hello, world!'.toUpperCase());
+
+        // let stroke = 'abrakadabra';
+        // let terget = 'abra';
+        // let N = 0;
+        // // while (true){
+        // //     let N1 = stroke.indexOf(target, N);
+        // //     if (N1 = -1) {break;}
+        // //     else{
+        // //         alert(`Найдено тут: ${N1}`);
+        // //         N = N1 + 1;
+        // //     }
+        // // }
+
+        // alert(stroke.slice(1,5))
+        // alert(stroke.substr(2,3))
+
+        // function ucFirst(str){
+        //     if(!str){return 'Stroke is empty!';}else{
+        //         return str[0].toUpperCase() + str.slice(1);
+
+
+        //     }
+        // }
+
+        // alert(ucFirst(stroke));
+
+
+
+        //ARRAYS
+
+        let arr1 =[];
+        let cities = ["Москва", "Тула", "Сочи"];
+        alert(cities[0]);
+        cities[2] = 'Калуга';
+        cities[3] = 'Орел';
+        let len = cities.length;
+        alert(len);
+
+        for (let i = 0; i < len; i ++){
+            alert(cities[i]);
+        }
+
+    </script>
+
+    <button onclick="ModalW()">Диалоговое окно</button>
+    <!-- <button onclick="newTask()">START</button> -->
+    
+    
+</body>
+</html>

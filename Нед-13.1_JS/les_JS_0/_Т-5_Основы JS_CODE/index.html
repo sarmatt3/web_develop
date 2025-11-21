@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы создания скриптов на JS</title>
+    <!-- <script src="js/myScript.js"></script> -->
+</head>
+    <body>
+
+        <script>
+                //---Вывод в окно диалога ----
+                 alert("Hello, world!");//Вывод в диалоговаое окно
+                    
+                    //ПЕРЕМЕННЫЕ И ОПЕРАТОРЫ
+                    
+                        let fioStudfent;// объявляем переменную
+                        fioStudent = "Иванов";
+                        alert("fioStudent = " + fioStudent);
+                        console.log("fioStudent = " + fioStudent);
+                    
+                    
+                    //ТИПЫ ДАННЫХ
+                    /*
+                    //Строковые переменные
+                    
+                        let str1 = "привет!";
+                        let str2 = 'привет!';
+                        let phrase =  `Вася, ${str2}`;//пример встраивания в строку,ОБРАТНЫЕ КАВЫЧКИ с $
+                        alert(phrase);
+                        alert(`результат: ${1 + 2}`);//ОБРАТНЫЕ КАВЫЧКИ с $
+                    
+
+                    //Сцепление строк:
+                
+                        let name = 'Вася';
+                        let message = 'привет!';
+                        let m = name + ', ' + message;
+                        alert(m);
+                    */
+                
+                    //Числовые переменные как целые, так и с плавающей запятой
+                    /*
+                    let n = 123;
+                    n = 12.345;
+                    alert(n+1);
+                    */
+                
+                    /*
+                    Операции для чисел: умножение *, деление /, сложение +,
+                    вычитание -, остаток от деления нацело %, инкремент++,
+                    возведение в степень ** и т.д.
+                    */
+                
+                    //тип boolean
+                    /*
+                    значения true, false
+                    операции >, <, ==, <=, >=
+                    логическое И -- &&
+                    логическое ИЛИ -- ||
+                    логическое НЕ -- !
+                    */
+                    /*
+                    let x = 6;
+                    let y = 3;
+                    alert(x < 10 && y >1);
+                    alert(x == 5 || y == 5);
+                    */
+                
+                    //тип Date хранит дату и время
+                    /*
+                    let now = new Date(); //создает объект Date с текущей датой и временем
+                    alert(now) ;
+                    
+                    
+                    let date = new Date(2024, 11, 21, 2, 12);//год, месяц, число, часы, минуты, секунды. Месяц номерация от 0
+                    alert(date);
+                    */
+                    //Получение одного из параметров даты
+                    /*
+                    getFullYear()
+                    getMonth()
+                    getDate()
+                    getHours(), getMinutes(), getSeconds(), getMilliseconds()
+                    */
+                
+                    //let date = new Date();//год, месяц, число, часы, минуты, секунды. Месяц номерация от 0
+                    /*
+                    let y = date.getFullYear();
+                    alert(y);
+                    */        
+                    
+                
+
+                    // ФУНКЦИИ ЯВНОГО ПРЕОБРАЗОВАНИЯ ТИПОВ ДАННЫХ
+                    //alert() преобразует данные к типу STRING
+                    //матем функции автоматически преобразуют данные к типу ЧИСЛО
+                    
+                    //к числу Number()
+                    let a = "123";
+                    let b = Number(a);
+                    
+                    //к строке String()
+                    let c = 123;
+                    let d = String(c);
+                    
+                    //К Boolean
+                    let e = 1;
+                    let f = Boolean(e);
+
+                    console.log(typeof(a), typeof(b), typeof(c), typeof(d), typeof(e), typeof(f))
+                    
+                    let answ = confirm("Do you like JS?")
+                    let answ1 = prompt("Your name")
+                    console.log(answ, answ1)
+
+                //ИНСТРУКЦИИ ВЗАИМОДЕЙСТВИЯ С ПОЛЬЗОВАТЕЛЕМ. Модальные окна
+                /*
+                - alert("Текст сообщения") -- выводит сообщение с некоторым текстом в окне с кнопкой ОК.
+
+                - prompt("Текст сообщения или вопрос"[, "Ответ по умолчанию"])  -- модальное окно, в котором  выводится текст сообщения, с полем ввода и кнопками ОК и ОТМЕНА 
+
+                - confirm() --- приказывает сообщение и ждет реакции пользоваателя. 
+                ОК возвращает true, ОТМЕНА или ESK - false
+                 */
+                /*
+                alert("Это результат работы  JS-скрипта!");
+                let name = prompt("Введите ваше имя","Алан");//при нажатии на ОК ввод помещается в строку name
+                alert(`Привет, ${name}!`);
+                alert('Привет, ' + name +'!');
+                */
+
+                /*
+                let name = prompt("Введите ваше имя","Алан");//при нажатии на ОК ввод помещается в строку name
+                let answer = confirm(`Вас зовут ${name}?`);
+                alert(answer);
+                */
+
+                 /*  
+                //ТЕМА "Оператор условия"
+                if (Boolean) {
+                    block1;
+                } else {
+                    block2
+                }
+                */
+                /*    
+                let language = 'JavaScript';
+                //let language = 'VBScript';
+
+                if (language == 'JavaScript'){
+                    alert('Да, я изучаю JavaScript!');
+                }else {
+                    alert('Нет, JavaScript я не изучаю!');    
+                }
+                */    
+
+
+                //Проверка более сложных условий
+                //Конструкция  if...else if...else...
+                /*
+                let d = new Date();
+                let time = d.getHours();
+                if (time < 10){
+                    alert('Доброе утро!');
+                } else {
+                    if (time >= 10 && time <= 16) {
+                        alert('Добрый день!');
+                    } else {
+                        alert('Добрый вечер!');
+                    }
+                }
+                */
+
+                 //ТЕМА "Циклы"
+                 //Цикл For
+
+                 /*
+                let i;
+                for (i = 0; i <= 5; i++) {
+                    alert("Число i равно " + i);
+                } 
+                 */
+
+                //Цикл while
+
+                /*   let i = 0;
+                while (i <= 5) {
+                    alert('Число i равно ' + i);
+                    i++;
+                }
+                */
+
+                //ТЕМА "ФУНКЦИИ"
+
+                /*
+                Функцию можно поместить 
+                1) в раздел head
+                2) в конец страницы
+                3) во внешний JS-файл, который подключается в области заголовка
+                или в конце тела страницы в контейнере SCRIPT
+
+                Общий синтаксис функции:
+                function имя_функции(var1, var2, var3..., varN){
+                        некоторый код;
+                }
+                */
+                //Пример функции с двумя параметрами name, text
+                /*
+                function showMessage(name, text) {
+                    alert(name + ', ' + text);    
+                }
+
+                //Пример вызова этой функции
+                showMessage('Аня', 'Привет!');
+                */
+
+                //Функция без параметров
+
+                /*
+                function showMessage() {
+                    alert('Аня, привет!');    
+                }
+
+                //Пример вызова этой функции
+                showMessage();
+
+                */
+
+                //Возврат значений из функции
+                /*
+                function product(a,b) {
+                    return a*b;
+                }
+
+                alert(product(4, 3));
+                */
+                /*
+                ЗАДАЧА
+                Написать скрипт JS, который выводит на экран 
+                все четные числа  от 0 до 20
+                */
+                
+                let i;
+                let str = "";
+                for (i = 0; i <= 20; i++) {
+                    if (i % 2 == 0) {
+                        // alert("Число i равно " + i);
+                        str = str + ' ' +   String(i/0) + "\n";                                            }    
+                }
+                alert(str);
+                
+
+        
+        </script>
+    </body> 
+</html>   

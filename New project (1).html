@@ -11,6 +11,48 @@
       
       <a href=# onclick="test()">Контакты</a>
     </header>
+
+    <div class="container">
+  <div
+      class="slide"
+      style="background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');"
+  >
+    <h3>Ferrari</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1573950940509-d924ee3fd345?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80');
+        "
+  >
+    <h3>Lamborghini</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1694&q=80');
+        "
+  >
+    <h3>Camaro</h3>
+  </div>
+  <div
+      class="slide active"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1535732820275-9ffd998cac22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80');
+        "
+  >
+    <h3>Aston</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+        "
+  >
+    <h3>Tesla</h3>
+  </div>
+</div>
+<script src="app.js"></script>
     <style>* {
   margin: 0;
   padding: 0;
@@ -18,11 +60,50 @@
 }
 
 body {
-  background-color: #0d0d0f;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  color: #fff;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #111; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.container {
+   width: 100%;
+   display: flex;
+   padding: 0 20px;
 }
 
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color:#fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;;
+}
+.slide h3 {
+  position: absolute;
+  font-size: 24 px;
+  bottom: 20px;
+  left: 20px;
+  margin:0px;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+} 
+.slide.active h3{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+} 
 /* Верхняя шапка */
 .head {
   background: #111827;
@@ -69,9 +150,20 @@ body {
 .head {
   position: relative;
   z-index: 10;
-}</style><script>function test(){
- // alert("Ссылка нажата")
- let value = prompt("Введите что-нибудь:", "По умолчанию");
+}</style><script>
+const slides =document.querySelectorAll('.slide')
 
-alert("Вы ввели: " + value);}
+for (const slide of slides) {
+    slide.addEventListener('click', ()=>{
+        clearActiveClases()
+        slide.classList.add('active')
+    })
+}
+
+
+function clearActiveClases() {
+    slides.forEach((slide)=>{
+        slide.classList.remove('active')
+    })
+}
  </script>
