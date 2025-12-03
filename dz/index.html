@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function navPanel(state = 0){
+            nav = document.getElementById("nav").style
+            menu = document.getElementById("menu")
+                st = menu.style
+            if (state == 0){
+                st.boxShadow = "0 0 4px 2px #ffffff50"
+                st.width = "70%"
+                nav.display = "none"
+                menu.innerHTML = "<button onclick='navPanel(1)' id='close'>ЗАКРЫТЬ</button>"
+            }else{
+                st.width = ""
+                st.boxShadow = ""
+                nav.display = ""
+                menu.innerHTML = ""
+            }
+        }
+    </script>
+    <header id="nav">
+        <a href="#" onclick="navPanel()" id="menua">МЕНЮ</a>
+        <a href="#" id="dough">ГЛАВНАЯ</a>
+        <a href="#" id="dough">ПРОЕКТЫ</a>
+        <a href="#" id="dough">КОНТАКТЫ</a>
+    </header>
+
+    <div id="menu">
+        
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    
+    
+}
+
+body{
+    background-color: #050505;
+}
+
+header{
+    background-color: #141414;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 4px 2px #ffffff50;
+}
+
+header a{
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 25px;
+    color: #ffffff;
+}
+
+#menu{
+    width: 0;
+    background-color: #141414;
+    
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    
+}
+
+#close{
+    
+}
+
+#menua{
+    display: none;
+}
+
+@media (max-width: 1080px){
+    #dough{
+        display: none;
+    }
+
+    #menua{
+        display: block;
+
+    }
+}
