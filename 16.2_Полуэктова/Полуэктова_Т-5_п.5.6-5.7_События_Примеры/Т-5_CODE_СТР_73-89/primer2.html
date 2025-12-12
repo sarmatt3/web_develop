@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример-2. Полуэктова_стр.83</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <h1>Заголовок 1</h1>
+    <p>Первый абзац</p>
+    
+    <h2>Заголовок 2</h2>
+    <p>Второй абзац</p>
+
+    <script>
+        
+
+//обработчик события mouseover    
+        $(function(){
+            $("p").mouseover(function(){
+                $(this).css({"color": "red",})
+            });
+        });
+
+//обработчик события mouseout
+        $(function(){
+            $("p").mouseout(function(){
+                $(this).css({"color": "black",})
+            });
+        });
+
+//обработчик события click
+        $(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+
+    </script>
+    
+    
+</body>
+</html>

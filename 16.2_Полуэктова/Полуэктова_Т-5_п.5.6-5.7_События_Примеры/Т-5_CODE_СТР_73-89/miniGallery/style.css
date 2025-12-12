@@ -1,0 +1,28 @@
+.app {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: box-shadow .3s ease-in-out;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 0 rgba(0,0,0, .15);
+}
+.card-img {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Пример jQuery. Выпадающее меню</title>
+</head>
+<body>
+
+<ul class="menu">
+    <li>
+        <p>Новости</p>
+        <ul class="submenu">
+            <li>Новости культуры</li>
+            <li>Новости спорта</li>
+        </ul>
+    </li>
+    <li>
+        <p>Наши продукты</p>
+        <ul class="submenu">
+            <li>Продукт 1</li>
+            <li>Продукт 2</li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+   $(document).ready(function(){
+        $('.menu li').hover(
+            function() {
+                $('ul', this).slideDown(110);
+            },
+            function () {
+                $('ul', this).slideUp(110);
+            });
+        }
+    );
+  
+
+ 
+   
+
+
+/*
+То, что функция начинается с $, означает, что будет использоваться  jQuery.
+Вызов метода в оболочке этой функции означает, что он выполнится после наступления события загрузки страницы. Этот код найдет на странице все заголовки p и заменит их цвет на красный    
+    
+*/
+
+
+</script>
+
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Пример jQuery. Обработка событий веб-страницы</title>
+</head>
+<body>
+
+<!-- 
+    Пример 1. Щелчок мыши по элементу абзаца изменяет цвет шрифта на красный 
+-->
+
+<!-- Пример 2.  Абзац после щелчка на нем исчезает. -->
+
+ <h1>Заголовок 1</h1>   
+ <p>Первый абзац</p>
+ <h2>Заголовок 2</h2>
+ <p>Второй абзац</p>
+
+<script>
+// на чистом JS
+let ps= document.getElementsByTagName('p');
+for (let i=0; i< ps.length;i++) {
+  ps[i].onclick = function(e){
+    e.target.style.color='red';
+  };
+}
+
+// c с применением jQuery
+/*    
+   $(function() {
+        $('p').click(function(){
+            $(this).css('color','red');
+        });
+   });
+
+ 
+    $(function () {
+        $('p').click(function () { 
+            $(this).hide();
+         });
+    });
+
+*/
+
+/*
+То, что функция начинается с $, означает, что будет использоваться  jQuery.
+Вызов метода в оболочке этой функции означает, что он выполнится после наступления события загрузки страницы. Этот код найдет на странице все заголовки p и заменит их цвет на красный    
+    
+*/
+
+
+</script>
+
+
+ 
+
+</body>
+</html>

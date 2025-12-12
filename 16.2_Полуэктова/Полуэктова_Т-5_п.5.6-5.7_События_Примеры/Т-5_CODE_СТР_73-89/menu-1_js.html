@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Раскрывающееся меню с применением JavaScript</title>
+
+    <style>
+        p {
+            margin:0;
+            padding:0;
+        }
+
+        .menu {
+            cursor: pointer;
+        }
+
+        .submenu {
+            /*
+            скрытые элементы с нулевой высотой, полностью прозрачные, но при их появлении 
+            будет использоваться плавная анимация, ускоряющаяся к концу
+            */
+            overflow: hidden; /* Переполняющее содержимое не отображается */
+            height: 0;
+            opacity: 0;
+            transition: all 0.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li class="menu">
+            <p>Новости</p>
+            <ul class="submenu">
+                <li>Новости культуры</li>
+                <li>Новости спорта</li>
+            </ul>
+        </li>
+
+        <li class="menu">
+            <p>Наши продукты</p>
+            <ul class="submenu">
+                <li>Продукт 1</li>
+                <li>Продукт 2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        //Собираем коллекцию из элементов класса menu
+        let elMenu = document.getElementsByClassName('menu');
+        //Обрабатываем их в цикле и назначаем им обрабочики события
+        //наведения  или отведения мыши
+
+        for (let i = 0; i < elMenu.length; i++) {
+            elMenu[i].addEventListener('mouseover', showSub, false);            
+            elMenu[i].addEventListener('mouseout', hideSub, false);
+        }
+
+
+        //Функция Показа дочерних элементов относительно текущего this
+        function showSub(e){
+            if (this.children.length > 1){
+                this.children[1].style.height = "auto";
+                this.children[1].style.overflow = "visible";
+                this.children[1].style.opacity = "1";                
+            } else {
+                return false;
+            }
+        }
+
+        //Фукнкция скрытия подменю для всех дочерних элементов относительно текущего
+        function hideSub(e){
+            if (this.children.length > 1){
+                this.children[1].style.height = "0";
+                this.children[1].style.overflow = "hidden";
+                this.children[1].style.opacity = "0";
+            } else {
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+

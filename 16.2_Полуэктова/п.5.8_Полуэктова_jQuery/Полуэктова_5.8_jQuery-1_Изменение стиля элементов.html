@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Пример jQuery. Изменение стиля элементов страницы</title>
+</head>
+<body>
+
+<!-- 
+    Задание: Изменить цвет заголовков страницы. 
+-->
+ <h2>Заголовок 1</h2>   
+ <p>Первый абзац</p>
+ <h2>Заголовок 2</h2>
+ <p>Второй абзац</p>
+
+<script>
+//на чистом JS    
+/* 
+let h2 = document.getElementsByTagName('h2');
+ for (let i=0;i< h2.length; i++){
+    h2[i].style.color='green';
+ }
+*/
+ //c применением jQUERY
+
+ $(function() {
+        $(this).hide();
+   });
+
+/*
+То, что функция начинается с $, означает, что будет использоваться  jQuery.
+Вызов метода в оболочке этой функции означает, что он выполнится после наступления события загрузки страницы. Этот код найдет на странице все заголовки h1 и заменит их цвет на зеленый    
+    
+*/
+</script>
+</body>
+</html>
